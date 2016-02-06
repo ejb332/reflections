@@ -5,4 +5,4 @@ A .git file is added to the folder. This allows git to begin tracking changes in
 
 How is the staging area different from the working directory and the repository? What value do you think it offers?
 
-The staging area is an intermediate step between the working directory and repository. It allows one more layer of protection between files before committing or altering files in your working directory.
+The staging area is an intermediate step between the working directory and repository. It allows one more layer of protection between files before committing or altering files in your working directory. The staging area is holding a copy of the most recent commit until new changes are added to the staging area from the working directory.
