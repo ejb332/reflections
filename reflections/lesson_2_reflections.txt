@@ -3,10 +3,44 @@ What happens when you initialize a repository? Why do you need to do it?
 A .git file is added to the folder. This allows git to begin tracking changes in a working directory and eventually push commits to a repository on github.
 
 
+
 How is the staging area different from the working directory and the repository? What value do you think it offers?
 
 The staging area is an intermediate step between the working directory and repository. It allows one more layer of protection between files before committing or altering files in your working directory. The staging area is holding a copy of the most recent commit until new changes are added to the staging area from the working directory.
 
+
 How can you use the staging area to make sure you have one commit per logical change?
 
-Use git diff --staged. It should show you a comparison of changes between the last commit and the file(s) in the staging area.
+Use git status to see which files are being tracked (and thus in the staging area for the next commit). Once you're satisfied that this a logical commit, commit to the file(s). You can also use git diff to determine what's changed between the working directory and staging area and git diff --staged to compare the working directory to the most recent commit to the repository.
+
+
+What are some situations when branches would be helpful in keeping your history organized? How would branches help?
+
+Branches are useful to for trying out new features or major changes that may or may not be implemented. If successful, they can later be merged into the master branch. The master branch remains intact until the merge, so any experiments can be done without interfering with working code.
+
+Because each branch can be named by feature or function, it's easy to find and checkout the desired branch. Multiple people can work on the same project without effecting another's work.
+
+
+How do the diagrams help you visualize the branch structure?
+
+A diagram is a quick visual representation of each commit's parent and where branches diverge from the master. Using a diagram also helps explain the concept of detached HEAD state and how to avoid losing that work (create a new branch).
+
+
+What is the result of merging two branches together? Why do we represent it in the diagram the way we do?
+
+The two braches become one, usually the new master. All changes from since when their histories diverged are incorporated.
+
+Merging is represented in the diagram as bridged between the two branches, so that the parental lineage can be continue to be traced back.
+
+
+What are the pros and cons of Git’s automatic merging vs. always doing merges manually?
+
+Automatic merging
+Pros: Efficient, takes all previous changes from both branches and incorporates them into a new tip (most recent commit), alerts you to issues
+
+Cons: Lots of opportunity for conflict, may warn you about conflicts you don't need to worry about
+
+Manual merges:
+Pros: Complete control by user
+
+Cons: Can be more time consuming, user may not always notice all conflicts
