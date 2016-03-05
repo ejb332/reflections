@@ -15,3 +15,13 @@ Forks are essentially clones of a repository, but they point back to the origina
 Clones are complete copies of a repository, pulled down to your local machine. This is useful when you want a copy of something, and attribution isn't necessary.
 
 Branches are local. These are useful when trying out new features, or otherwise making a big change that you don't want to effect good, working code. Working branches can always be merged back to the master branch at a later point.
+
+
+What is the benefit of having a copy of the last known state of the remote stored locally?
+
+The main benefit is working offline. This can be pulled without merging into local branches (thanks git fetch!)
+
+
+How would you collaborate without using Git or GitHub? What would be easier, and what would be harder?
+
+Probably via dropbox or a similar filesharing service. Sure, it would be easier to simply zip a folder and dump it into dropbox, but all of the benefits of merging, difference tracking, and easily rolling back to old versions would be lost.
