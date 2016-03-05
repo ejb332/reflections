@@ -1,3 +1,8 @@
 When would you want to use a remote repository rather than keeping all your work local?
 
 When working with collaborators seems like the ideal situation for using a remote.
+
+
+Why might you want to always pull changes manually rather than having Git automatically stay up-to-date with your remote repository?
+
+The master could potentially be updated and the commit you've been working with would no longer be at the tip. Thus, you'll find yourself in an unwanted 'detached HEAD' state, and you've have to branch and then potentially merge branches.
