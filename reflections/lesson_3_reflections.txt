@@ -6,3 +6,12 @@ When working with collaborators seems like the ideal situation for using a remot
 Why might you want to always pull changes manually rather than having Git automatically stay up-to-date with your remote repository?
 
 The master could potentially be updated and the commit you've been working with would no longer be at the tip. Thus, you'll find yourself in an unwanted 'detached HEAD' state, and you've have to branch and then potentially merge branches.
+
+
+Describe the differences between forks, clones, and branches. When would you use one instead of another?
+
+Forks are essentially clones of a repository, but they point back to the original author. This should be used when you want to refer back to an original, but don't want to modify the original repository.
+
+Clones are complete copies of a repository, pulled down to your local machine. This is useful when you want a copy of something, and attribution isn't necessary.
+
+Branches are local. These are useful when trying out new features, or otherwise making a big change that you don't want to effect good, working code. Working branches can always be merged back to the master branch at a later point.
